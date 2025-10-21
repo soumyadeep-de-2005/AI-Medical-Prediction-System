@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.medpred.controllers.PatientFormController"
+      spacing="16" alignment="CENTER" style="-fx-padding: 30;">
+
+    <Label text="Add New Patient &amp; Predict Risk" styleClass="title" />
+
+    <HBox spacing="10">
+        <Label text="Name:"/>
+        <TextField fx:id="nameField" prefWidth="200" promptText="Full Name"/>
+    </HBox>
+
+    <HBox spacing="10">
+        <Label text="Age:"/>
+        <TextField fx:id="ageField" prefWidth="60" promptText="Years"/>
+        <Label text="Sex (M/F):"/>
+        <TextField fx:id="sexField" prefWidth="60" promptText="M/F"/>
+    </HBox>
+
+    <HBox spacing="10">
+        <Label text="BMI:"/>
+        <TextField fx:id="bmiField" prefWidth="60" promptText="e.g. 25.5"/>
+        <Label text="Glucose:"/>
+        <TextField fx:id="glucoseField" prefWidth="60" promptText="e.g. 110"/>
+        <Label text="Blood Pressure:"/>
+        <TextField fx:id="bpField" prefWidth="60" promptText="e.g. 70"/>
+    </HBox>
+
+    <Button text="Predict &amp; Save" onAction="#predict" />
+    <Label fx:id="resultLabel" style="-fx-text-fill: #2980b9;"/>
+    <Button text="Back" onAction="#back" maxWidth="100"/>
+
+</VBox>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.Button?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.medpred.controllers.PredictionsController"
+      spacing="16" alignment="CENTER" style="-fx-padding: 20;">
+    <Label text="Prediction History" styleClass="title"/>
+    <TableView fx:id="table" prefWidth="600">
+        <columns>
+            <TableColumn fx:id="nameCol" text="Name"/>
+            <TableColumn fx:id="ageCol" text="Age"/>
+            <TableColumn fx:id="sexCol" text="Sex"/>
+            <TableColumn fx:id="riskCol" text="Risk %"/>
+            <TableColumn fx:id="dateCol" text="Timestamp"/>
+        </columns>
+    </TableView>
+    <Button text="Back" onAction="#back" maxWidth="100"/>
+</VBox>
